@@ -1,13 +1,16 @@
 * {
     box-sizing: border-box;
     font-family: RalewayRegular;
+    color: #212121;
+
+
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     margin: 0;
-    background: #FEFEFE;
     align-items: center;
+    background-color: #F5F5F5;
 }
 
 title {
@@ -56,17 +59,14 @@ p {
     RESET END
 */
 
-.content-wrapper {
-    max-width: 1280px;
-    width: 100%;
-    align-items: center;
-}
 
 .banner {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 50vh;
+    min-height: 500px;
     background: url("./img/kevin-delvecchio-273282.jpg") no-repeat center center;
+    filter: contrast(120%);
     background-size: cover;
     justify-content: center;
 
@@ -84,7 +84,7 @@ p {
 
     background-image: linear-gradient(to bottom, #093028, #237A57);
 
-    opacity: 0.3;
+    opacity: 0.4;
 
 }
 
@@ -97,8 +97,21 @@ p {
     text-align: center;
     z-index: 20;
 
+    filter: brightness(130%);
+
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
     /*margin-top: 100px;*/
+}
+
+.logo{
+    z-index: 15;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+.logo img{
+    height: 50px;
+    width: 50px;
 }
 
 nav {
@@ -251,8 +264,98 @@ nav {
     color: #FEFEFE;
 }
 
+.content-wrapper {
+    max-width: 1280px;
+    width: 100%;
+
+    padding-top: 40px;
+}
 
 
+.event-description{
+    max-width: 50%;
+}
+
+
+.event-description-title{
+    font-size: 42px;
+    line-height: 54px;
+
+    padding-bottom: 5px;
+    padding-left: 5px;
+
+    margin-bottom: 20px;
+    margin-top: 0;
+
+    border-bottom: 2px solid #1B5E20;
+    color: #1B5E20;
+
+    font-family: RalewayMedium;
+    font-weight: 600;
+}
+
+.event-description-text{
+    height: auto;
+    line-height: 21px;
+    text-align: justify;
+    margin-bottom: 5px;
+    padding: 0 5px;
+}
+
+.main-sign-up{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-sign-up-title{
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.main-sign-up-button{
+    width: 180px;
+    height: 60px;
+
+
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-family: RalewayMedium;
+    font-size: 18px;
+
+    color: #FAFAFA;
+
+
+    background: #1B5E20;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.26);
+
+    transition: 0.3s all;
+}
+
+.main-sign-up-button:hover{
+    background: #2E7D32;
+    /*box-shadow: 2px 3px 5px rgba(0,0,0,.46);*/
+}
+
+
+
+
+
+footer{
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+
+    background: #212121;
+
+    border-top: 2px solid #1B5E20;
+}
 
 
 /*
