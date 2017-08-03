@@ -7,8 +7,8 @@
 </head>
 <body class="col aloldal">
 <nav class="nav nav-aloldal box-shadow">
-    <a href="" class="logo">
-
+    <a href="index.html" class="logo">
+        <img src="./img/logo.png" alt="">
     </a>
     <ul class="nav-bar">
         <li class="nav-item"><a href="">Programok</a></li>
@@ -18,10 +18,74 @@
     </ul>
 </nav>
 <h1 class="subpage-title box-shadow">Jelentkezés</h1>
-<main class="content-wrapper col">
+<main class="content-wrapper sign-up-wrapper col">
+    <section class="sign-up-form-wrapper">
+        <form action="" class="sign-up-form col">
 
+            <div class="flex-row">
+                <div class="form-inputs-wrapper col">
+                    <div class="form-input-wrapper col">
+                        <input type="text" id="name" class="form-input" required>
+                        <label for="name" class="input-label">Versenyő neve</label>
+                    </div>
+
+                    <div class="form-input-wrapper col">
+                        <input type="text" id="contact" class="form-input" required>
+                        <label for="contact" class="input-label">Elérhetőség</label>
+                    </div>
+
+                    <div class="form-input-wrapper col">
+                        <input type="text" id="horse-name" class="form-input" required>
+                        <label for="horse-name" class="input-label">Ló neve</label>
+                    </div>
+
+                    <div class="form-input-wrapper col">
+                        <input type="number" id="company" class="form-input" min="0" max="20" required>
+                        <label for="company" class="input-label">Kísérők száma</label>
+                    </div>
+
+                    <div class="form-input-wrapper col">
+                        <textarea name="" id="other" cols="30" rows="10" class="form-input form-textarea"
+                                  required></textarea>
+                        <label for="other" class="input-label">Eddigi eredmények, egyéb információk</label>
+                    </div>
+                </div>
+                <div class="rules-wrapper col">
+                    <h2 class="rules-title">Versenyszabályzat</h2>
+                    <div class="rules-text-wrapper col">
+                        <p class="rules-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis cum dignissimos,
+                            doloremque eveniet ex, ipsa neque nisi nulla obcaecati officiis omnis porro rerum sequi,
+                            tempore veniam voluptatum. Natus, quisquam.
+                        </p>
+                        <p class="rules-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis cum dignissimos,
+                            doloremque eveniet ex, ipsa neque nisi nulla obcaecati officiis omnis porro rerum sequi,
+                            tempore veniam voluptatum. Natus, quisquam.
+                        </p>
+                        <p class="rules-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis cum dignissimos,
+                            doloremque eveniet ex, ipsa neque nisi nulla obcaecati officiis omnis porro rerum sequi,
+                            tempore veniam voluptatum. Natus, quisquam.
+                        </p>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="agree" class="form-checkbox" required>
+                        <label for="agree">Megértettem és elfogadom a versenyszabályzatot</label>
+                    </div>
+
+                </div>
+            </div>
+            <input type="submit" class="form-submit" value="Küldés">
+
+        </form>
+
+    </section>
 </main>
 
+<footer>
 
+</footer>
 </body>
 </html>
