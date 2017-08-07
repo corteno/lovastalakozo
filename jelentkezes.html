@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Lovastalálkozó</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
 </head>
 <body class="col aloldal">
 <nav class="nav nav-aloldal box-shadow">
@@ -20,7 +21,7 @@
 <h1 class="subpage-title box-shadow">Jelentkezés</h1>
 <main class="content-wrapper sign-up-wrapper col">
     <section class="sign-up-form-wrapper">
-        <form action="" class="sign-up-form col">
+        <form action="jelentkezes.html" class="sign-up-form col">
 
             <div class="flex-row">
                 <div class="form-inputs-wrapper col">
@@ -45,8 +46,7 @@
                     </div>
 
                     <div class="form-input-wrapper col">
-                        <textarea name="" id="other" cols="30" rows="10" class="form-input form-textarea"
-                                  required></textarea>
+                        <textarea name="" id="other" cols="30" rows="10" class="form-input form-textarea"></textarea>
                         <label for="other" class="input-label">Eddigi eredmények, egyéb információk</label>
                     </div>
                 </div>
@@ -77,12 +77,34 @@
 
                 </div>
             </div>
+
+            <p class="form-message"></p>
             <input type="submit" class="form-submit" value="Küldés">
 
         </form>
 
     </section>
 </main>
+
+<script>
+    document.querySelector('.sign-up-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        let submission = {
+            name: e.target[0].value,
+            contact: e.target[1].value,
+            horsename: e.target[2].value,
+            company: e.target[3].value,
+            comments: e.target[4].value
+        };
+        axios.post('http://localhost:3000/signup', submission)
+            .then((response) => {
+                document.querySelector('.form-message').innerHTML = response.data.message;
+            })
+            .catch((error) => {
+                //console.log(error);
+            });
+    });
+</script>
 
 <footer>
 
