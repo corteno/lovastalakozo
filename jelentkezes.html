@@ -99,6 +99,11 @@
         axios.post('https://lovastalalkozo.herokuapp.com/signup', submission)
             .then((response) => {
                 document.querySelector('.form-message').innerHTML = response.data.message;
+
+                //Reset form
+                for(let i = 0; i < 5; i++){
+                    e.target[i].value = '';
+                }
             })
             .catch((error) => {
                 //console.log(error);
