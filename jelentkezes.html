@@ -96,7 +96,7 @@
             company: e.target[3].value,
             comments: e.target[4].value
         };
-        axios.post('http://localhost:3000/signup', submission)
+        axios.post('https://lovastalalkozo.herokuapp.com/signup', submission)
             .then((response) => {
                 document.querySelector('.form-message').innerHTML = response.data.message;
             })
