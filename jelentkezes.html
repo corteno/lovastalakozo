@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lovastalálkozó</title>
+    <title>Lovastalálkozó | Jelentkezés</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
 </head>
@@ -14,8 +14,9 @@
     <ul class="nav-bar">
         <li class="nav-item"><a href="programok.html">Programok</a></li>
         <li class="nav-item"><a href="jelentkezes.html">Jelentkezés</a></li>
-        <li class="nav-item"><a href="">Galéria</a></li>
-        <li class="nav-item"><a href="">Kapcsolat</a></li>
+        <li class="nav-item"><a href="tamogatok.html">Támogatók</a></li>
+        <li class="nav-item"><a href="galeria.html">Galéria</a></li>
+        <li class="nav-item"><a href="kapcsolat.html">Kapcsolat</a></li>
     </ul>
 </nav>
 <h1 class="subpage-title box-shadow">Jelentkezés</h1>
@@ -25,6 +26,7 @@
 
             <div class="flex-row">
                 <div class="form-inputs-wrapper col">
+                    <h3 class="form-title">Jelentkezési határidő: <span class="bold">Szeptember 5.</span></h3>
                     <div class="form-input-wrapper col">
                         <input type="text" id="name" class="form-input" required>
                         <label for="name" class="input-label">Versenyő neve</label>
@@ -43,11 +45,6 @@
                     <div class="form-input-wrapper col">
                         <input type="number" id="company" class="form-input" min="0" max="20" required>
                         <label for="company" class="input-label">Kísérők száma</label>
-                    </div>
-
-                    <div class="form-input-wrapper col">
-                        <textarea name="" id="other" cols="30" rows="10" class="form-input form-textarea" ></textarea>
-                        <label for="other" class="input-label">Eddigi eredmények, egyéb információk</label>
                     </div>
                 </div>
                 <div class="rules-wrapper col">
@@ -93,15 +90,14 @@
             name: e.target[0].value,
             contact: e.target[1].value,
             horsename: e.target[2].value,
-            company: e.target[3].value,
-            comments: e.target[4].value
+            company: e.target[3].value
         };
         axios.post('https://lovastalalkozo.herokuapp.com/signup', submission)
             .then((response) => {
                 document.querySelector('.form-message').innerHTML = response.data.message;
 
                 //Reset form
-                for(let i = 0; i < 5; i++){
+                for(let i = 0; i < 4; i++){
                     e.target[i].value = '';
                 }
             })

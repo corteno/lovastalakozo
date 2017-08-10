@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lovastalálkozó | Jelentkezés</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+</head>
+<body class="col aloldal">
+<nav class="nav nav-aloldal box-shadow">
+    <a href="index.html" class="logo">
+        <img src="./img/logo.png" alt="">
+    </a>
+    <ul class="nav-bar">
+        <li class="nav-item"><a href="programok.html">Programok</a></li>
+        <li class="nav-item"><a href="jelentkezes.html">Jelentkezés</a></li>
+        <li class="nav-item"><a href="tamogatok.html">Támogatók</a></li>
+        <li class="nav-item"><a href="galeria.html">Galéria</a></li>
+        <li class="nav-item"><a href="kapcsolat.html">Kapcsolat</a></li>
+    </ul>
+</nav>
+<h1 class="subpage-title box-shadow">Kapcsolat</h1>
+<main class="content-wrapper contact-wrapper col">
+
+    <h2 class="contact-title">
+        A lovas rendezvény szervezője az ŐR-NYÉK Hagyományőrző és Harcművészeti Alapítvány
+    </h2>
+
+    <div class="contact-map-wrapper">
+        <div class="contact-map-wrapper-left col">
+            <h3 class="contact-map-title">A rendezvény helyszíne:</h3>
+            <h4 class="contact-map-subtitle">
+                Szentgotthárd, Várkert<br>
+                Szabadtéri színpad elotti terület
+            </h4>
+            <div class="contact-map-coordinates-wrapper col">
+                <div class="coordinates-row coordinates-header">
+                    <p>Földrajzi koordináták</p>
+                    <p>Északi szélesség/lat</p>
+                    <p>Keleti hosszúság/lng</p>
+                </div>
+                <div class="coordinates-row">
+                    <p>Fok</p>
+                    <p>46.9534194642</p>
+                    <p>16.2762470476</p>
+                </div>
+                <div class="coordinates-row">
+                    <p>Fok° perc' másodperc"</p>
+                    <p>46° 57' 12.3" N</p>
+                    <p>16° 16' 34.4" E</p>
+                </div>
+            </div>
+        </div>
+        <div class="google-map"></div>
+    </div>
+
+    <div class="contact-info-wrapper col">
+        <h3 class="contact-info-title">Kapcsolat:</h3>
+        <div class="contact-info">
+            <p>Pécsi József, telefon:</p> <a class="contact-link" href="tel:36309015148">+36-30-901-5148</a>
+        </div>
+
+        <div class="contact-info">
+            <p>E-mail: </p><a class="contact-link" href="mailto:36309015148">ornyekalapitvany@gmail.com</a>
+        </div>
+    </div>
+
+</main>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2mSvnDZKMMo8995P7P0u1FCqOnZryVvs" defer></script>
+<script src="./js/google_maps.js" defer></script>
+<footer>
+    <div class="footer-made-by">Készítette Borsodi Dávid © 2017</div>
+</footer>
+</body>
+</html>
