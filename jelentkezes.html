@@ -81,34 +81,40 @@
         </form>
 
     </section>
+
+    <section class="prizes-wrapper col">
+        <h3 class="prizes-title">Díjak</h3>
+
+        <div class="prizes-content-wrapper">
+
+            <div class="prize-wrapper col">
+                <p class="prize-title">1. hely</p>
+                <p class="prize-text">Egy lovasíjász nyereg Kassai Lajos műhelyéből</p>
+                <img src="./img/prize_1.png" alt="első_díj" class="prize-img">
+            </div>
+
+            <div class="prize-wrapper col">
+                <p class="prize-title">2. hely</p>
+                <p class="prize-text">Egy íj</p>
+                <img src="./img/prize_1.png" alt="első_díj" class="prize-img">
+            </div>
+
+            <div class="prize-wrapper col">
+                <p class="prize-title">3. hely</p>
+                <p class="prize-text">Egy tegez</p>
+                <img src="./img/prize_1.png" alt="első_díj" class="prize-img">
+            </div>
+
+        </div>
+
+    </section>
+
 </main>
 
-<script>
-    document.querySelector('.sign-up-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        let submission = {
-            name: e.target[0].value,
-            contact: e.target[1].value,
-            horsename: e.target[2].value,
-            company: e.target[3].value
-        };
-        axios.post('https://lovastalalkozo.herokuapp.com/signup', submission)
-            .then((response) => {
-                document.querySelector('.form-message').innerHTML = response.data.message;
-
-                //Reset form
-                for(let i = 0; i < 4; i++){
-                    e.target[i].value = '';
-                }
-            })
-            .catch((error) => {
-                //console.log(error);
-            });
-    });
-</script>
 
 <footer>
     <div class="footer-made-by">Készítette Borsodi Dávid © 2017</div>
 </footer>
+<script src="./js/sign-up.js"></script>
 </body>
 </html>
