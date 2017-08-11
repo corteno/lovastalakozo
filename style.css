@@ -50,9 +50,6 @@ p {
     flex-direction: row;
 }
 
-.box-shadow {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
-}
 
 /*
     RESET END
@@ -194,11 +191,8 @@ nav {
 }
 
 .nav-aloldal {
-    /*padding-top: 15px;
-    padding-bottom: 15px;*/
-    /*background: #15523d;*/
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
     background: #FAFAFA;
+    border-bottom: 2px solid #237a57;
 }
 
 .nav-aloldal a {
@@ -301,8 +295,7 @@ nav {
     color: #FAFAFA;
 
     background: #1B5E20;
-    border-radius: 4px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, .26);
+    border-radius: 2px;
 
     transition: 0.3s all;
 }
@@ -339,11 +332,13 @@ nav {
 
 .sign-up-form-wrapper {
     justify-content: space-between;
+    padding: 0 10px;
 
 }
 
 .form-inputs-wrapper {
-    width: 40%;
+    width: 50%;
+    margin-right: 40px;
 }
 
 .sign-up-form {
@@ -352,7 +347,7 @@ nav {
 
 .form-input-wrapper {
     position: relative;
-    max-width: 500px;
+    /*max-width: 500px;*/
     width: 100%;
 }
 
@@ -406,7 +401,7 @@ nav {
 }
 
 .rules-wrapper {
-    width: 60%;
+    width: 50%;
     margin-left: 20px;
 
 }
@@ -425,7 +420,7 @@ nav {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #E0E0E0;
-    border-radius: 8px;
+    border-radius: 4px;
     line-height: 21px;
 
     overflow-y: auto;
@@ -586,8 +581,6 @@ nav {
 
     text-align: justify;
     padding-right: 40px;
-    align-items: center;
-    justify-content: center;
 
 }
 
@@ -607,22 +600,39 @@ nav {
     align-items: center;
 }
 
+.programmes-text-main{
+    font-size: 30px;
+    font-family: RalewayRegular;
+    margin-bottom: 20px;
+    padding: 0 10px 10px;
+    border-bottom: 2px solid #1B5E20;
+
+    color: #237A57;
+
+}
+
+.programmes-text-wrapper{
+    margin-bottom: 10px;
+}
+
+
 .programmes-text {
     width: 100%;
-    font-family: DancingScriptRegular;
-    font-size: 28px;
-    line-height: 52px;
-    padding: 0 10px;
-}
-
-.programmes-text:first-of-type{
-    font-size: 30px;
     font-family: DancingScriptBold;
-    border-bottom: 2px solid #237A57;
-    margin-bottom: 5px;
-    padding: 10px;
+    font-size: 28px;
+    line-height: 32px;
+    padding: 0 10px;
+    margin-bottom: 0;
 
+    color: #424242;
 }
+
+.programmes-text:last-of-type {
+    width: 100%;
+    font-family: RalewayRegular;
+    font-size: 18px;
+}
+
 
 .gallery-wrapper {
     position: relative;
@@ -719,7 +729,7 @@ nav {
     color: #237a57;
 
     margin: 0;
-    height: calc(100vh - 377px);
+    height: calc(100vh - 337px);
 }
 
 
@@ -733,12 +743,12 @@ nav {
 }
 
 .contact-title{
-    font-family: DancingScriptRegular;
-    font-size: 48px;
+    font-size: 36px;
     justify-content: center;
     text-align: center;
     color: #1B5E20;
     margin-top: 0;
+    font-weight: 600;
 }
 
 .contact-info-title{
@@ -778,6 +788,8 @@ nav {
 .contact-map-wrapper{
     margin-top: 40px;
     margin-bottom: 70px;
+
+    align-items: center;
 }
 
 .contact-map-wrapper-left{
@@ -787,26 +799,23 @@ nav {
 
 
 .contact-map-title{
-    font-size: 38px;
-    padding-bottom: 10px;
-    margin-bottom: 0;
-    color: #1B5E20;
+    font-size: 30px;
+    color: #2E7D32;
+    margin: 0;
+    padding-left: 5px;
 
 }
 
 .contact-map-subtitle{
-    font-size: 30px;
-    color: #2E7D32;
-    margin: 0;
-    padding-bottom: 20px;
     padding-left: 5px;
+    margin: 0 0 20px;
 
-
+    font-weight: 400;
 }
 
+
 .google-map{
-    width: 45%;
-    max-width: 550px;
+    width: 100%;
     height: 450px;
     background: #eee;
 }
@@ -837,19 +846,19 @@ nav {
 
 .supporters-wrapper{
     padding-top: 0;
+    justify-content: center;
+    height: calc(100vh - 297px);
+    min-height: 340px;
+
+    align-items: center;
 }
 
-.supporter-wrapper{
-    margin-bottom: 60px;
-}
-
-.supporter-wrapper:last-of-type{
-    margin-bottom: 40px;
+.supporter-wrapper:first-of-type{
+    margin-right: 40px;
 }
 
 .supporter-title{
-    font-family: DancingScriptRegular;
-    font-size: 42px;
+    font-size: 32px;
 
     color: #237a57;
     justify-content: center;
@@ -858,6 +867,8 @@ nav {
 }
 
 .supporter-img{
+    max-height: 250px;
+    width: 250px;
     object-fit: contain;
 }
 
@@ -870,7 +881,7 @@ nav {
 
 footer {
     width: 100%;
-    height: 100px;
+    height: 60px;
     margin-top: 50px;
 
     background: #212121;
