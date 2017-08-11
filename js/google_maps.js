@@ -11,31 +11,62 @@ function initMap() {
         scrollwheel: false,
         styles: [
             {
+                "featureType": "administrative.land_parcel",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape",
                 "elementType": "geometry.fill",
                 "stylers": [
                     {
-                        "saturation": -75
+                        "color": "#78eb89"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape.man_made",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#96d58e"
+                    },
+                    {
+                        "saturation": -40
+                    },
+                    {
+                        "lightness": -10
                     }
                 ]
             },
             {
                 "featureType": "landscape.natural",
-                "elementType": "geometry",
+                "elementType": "geometry.fill",
                 "stylers": [
                     {
-                        "saturation": -30
+                        "color": "#78eb89"
                     }
                 ]
             },
             {
-                "featureType": "poi.park",
-                "elementType": "geometry.fill",
+                "featureType": "poi",
+                "elementType": "labels.text",
                 "stylers": [
                     {
-                        "color": "#45c24f"
-                    },
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "labels",
+                "stylers": [
                     {
-                        "saturation": -30
+                        "visibility": "off"
                     }
                 ]
             }
