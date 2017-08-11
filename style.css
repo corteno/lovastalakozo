@@ -559,13 +559,18 @@ nav {
     PROGRAMOK
 */
 
+.programmes-wrapper{
+    min-height: 500px;
+    height: calc(100vh - 337px);
+}
+
 .programmes-wrapper {
 
 }
 
 .programmes-panel {
     padding: 0 20px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .programmes-panel:nth-of-type(2) {
