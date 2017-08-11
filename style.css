@@ -324,10 +324,10 @@ nav {
 }
 
 .bold{
-    margin-left: 7px;
+   /* margin-left: 7px;
     font-family: RalewayBold;
     font-size: 30px;
-    color: #237A57;
+    color: #237A57;*/
 }
 
 .sign-up-form-wrapper {
@@ -601,7 +601,8 @@ nav {
 }
 
 .programmes-text-main{
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 34px;
     font-family: RalewayRegular;
     margin-bottom: 20px;
     padding: 0 10px 10px;
@@ -681,41 +682,52 @@ nav {
 }
 
 .programmes-download-wrapper{
-    max-width: 150px;
-    align-self: center;
-    border-radius: 5px;
+    align-self: flex-start;
     cursor: pointer;
+    transition: 0.4s all;
+    margin-left: 5px;
+
+    border: 2px solid #237A57;
+
+    transition: 0.4s all;
+}
+
+
+.download-text{
+    position: relative;
+    text-align: center;
+    padding: 10px 14px 10px 40px;
+
+    font-family: RalewayMedium;
+    font-weight: 600;
+    font-size: 20px;
+    color: #237A57;
+}
+
+.download-text:before{
+    content: '';
+    position: absolute;
+    bottom: 22px;
+    left: 10px;
+
+    height: 20px;
+    width: 20px;
+
+    background: url("./img/download_icon_green.png") no-repeat center center;
+    background-size: contain;
     transition: 0.4s all;
 }
 
 .programmes-download-wrapper:hover{
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .76);
-}
-
-.download-image{
-    height: 150px;
-
-    justify-content: center;
-    align-items: center;
-
-    background: #43A047;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    font-size: 24px;
-    font-family: RalewayBold;
-    color: #FAFAFA;
-}
-
-.download-text{
-    text-align: center;
-    padding: 10px 9px;
-
-    font-family: RalewayMedium;
-    font-size: 14px;
-    color: #FEFEFE;
     background: #237A57;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+}
+
+.programmes-download-wrapper:hover .download-text{
+    color: #FEFEFE;
+}
+
+.programmes-download-wrapper:hover .download-text:before{
+    background-image: url("./img/download_icon_white.png");
 }
 
 /*
