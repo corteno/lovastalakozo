@@ -50,7 +50,6 @@ p {
     flex-direction: row;
 }
 
-
 /*
     RESET END
 */
@@ -89,6 +88,7 @@ p {
     font-family: DancingScriptBold;
     align-items: center;
     margin-bottom: 10px;
+    padding: 0 20px;
     z-index: 20;
     text-align: center;
 
@@ -104,6 +104,7 @@ p {
     color: #FEFEFE;
     font-family: DancingScriptRegular;
     text-align: center;
+    padding: 0 20px;
     z-index: 20;
     font-weight: 400;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
@@ -126,8 +127,6 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
     padding: 10px 0;
 }
-
-
 
 .nav {
     background: transparent;
@@ -211,6 +210,65 @@ nav {
     background: #237a57;
 }
 
+.nav-open{
+    position: absolute;
+    display: flex !important;
+
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 20;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: #FEFEFE;
+    color: #237a57;
+
+    animation-name: nav-open;
+    animation-duration: 0.5s;
+}
+
+.nav-close{
+    opacity: 0;
+    animation-name: nav-close;
+    animation-duration: 0.4s;
+}
+
+.nav-open a{
+    color: #237a57;
+}
+
+.nav-open ~ .hamburger{
+    border-color: #237a57;
+}
+
+.nav-open ~ .hamburger::before, .nav-open ~ .hamburger::after{
+    background: #237a57;
+}
+
+@keyframes nav-open {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes nav-close {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 .subpage-title {
     margin-top: 70px;
     width: 100%;
@@ -234,7 +292,7 @@ nav {
     padding-top: 40px;
 }
 
-.index-wrapper{
+.index-wrapper {
     align-items: center;
 }
 
@@ -242,6 +300,7 @@ nav {
     max-width: 50%;
     width: 50%;
     margin-bottom: 30px;
+    padding: 0 20px;
 }
 
 .event-description-title {
@@ -277,13 +336,14 @@ nav {
     width: 50%;
     align-items: center;
     justify-content: center;
+    padding: 0 20px;
 }
 
-.main-sign-up .programmes-text-wrapper{
+.main-sign-up .programmes-text-wrapper {
     margin-bottom: 30px;
 }
 
-.main-sign-up .programmes-text{
+.main-sign-up .programmes-text {
     font-size: 32px;
     text-align: center;
 }
@@ -293,6 +353,7 @@ nav {
     margin-bottom: 20px;
     font-size: 28px;
     line-height: 31px;
+    text-align: center;
     color: #424242;
 }
 
@@ -329,7 +390,7 @@ nav {
     min-height: 440px;
 }
 
-.form-title{
+.form-title {
     font-family: RalewayMedium;
     font-size: 28px;
     font-weight: 400;
@@ -338,11 +399,11 @@ nav {
     margin-top: 5px;
 }
 
-.bold{
-   /* margin-left: 7px;
-    font-family: RalewayBold;
-    font-size: 30px;
-    color: #237A57;*/
+.bold {
+    /* margin-left: 7px;
+     font-family: RalewayBold;
+     font-size: 30px;
+     color: #237A57;*/
 }
 
 .sign-up-form-wrapper {
@@ -524,15 +585,18 @@ nav {
     font-family: RalewayBold;
 }
 
-
-.prizes-content-wrapper{
-    padding: 0 5px;
-    justify-content: space-between;
-    margin-bottom: 50px;
+.prizes-wrapper{
+    padding: 0 20px;
 }
 
+.prizes-content-wrapper {
+    padding: 0 5px;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
 
-.prizes-title{
+.prizes-title {
     width: 100%;
     font-family: DancingScriptRegular;
     font-size: 48px;
@@ -544,12 +608,16 @@ nav {
     border-bottom: 2px solid #237A57;
 }
 
-.prize-wrapper{
+.prize-wrapper {
     align-items: center;
-
+    margin-right: 20px;
 }
 
-.prize-title{
+.prize-wrapper:last-of-type {
+    margin-right: 0;
+}
+
+.prize-title {
     font-family: DancingScriptBold;
     font-size: 32px;
     color: #237A57;
@@ -557,26 +625,26 @@ nav {
     font-weight: 800;
 }
 
-.prize-text{
+.prize-text {
     font-family: DancingScriptRegular;
     font-size: 22px;
 
     margin-bottom: 5px;
 }
 
-.prize-img{
-    height: 250px;
+.prize-img {
+    height: auto;
+    max-height: 250px;
+    width: 100%;
+    max-width: 320px;
 }
-
-
 
 /*
     PROGRAMOK
 */
 
-.programmes-wrapper{
+.programmes-wrapper {
     min-height: 450px;
-    height: calc(100vh - 337px);
 }
 
 .programmes-wrapper {
@@ -620,7 +688,7 @@ nav {
     align-items: center;
 }
 
-.programmes-text-main{
+.programmes-text-main {
     font-size: 28px;
     line-height: 34px;
     font-family: RalewayRegular;
@@ -632,10 +700,9 @@ nav {
 
 }
 
-.programmes-text-wrapper{
+.programmes-text-wrapper {
     margin-bottom: 10px;
 }
-
 
 .programmes-text {
     width: 100%;
@@ -654,11 +721,11 @@ nav {
     font-size: 18px;
 }
 
-.programmes-contestants{
+.programmes-contestants {
     padding: 0 20px;
 }
 
-.contestants-title{
+.contestants-title {
     max-width: calc(55% - 40px);
     color: #237A57;
     font-family: DancingScriptRegular;
@@ -671,11 +738,11 @@ nav {
     border-bottom: 2px solid #237A57;
 }
 
-.contestants-list{
+.contestants-list {
     padding-left: 5px;
 }
 
-.contestant-list-item{
+.contestant-list-item {
     position: relative;
     padding-left: 20px;
     font-size: 18px;
@@ -684,7 +751,7 @@ nav {
     color: #424242;
 }
 
-.contestant-list-item:before{
+.contestant-list-item:before {
     content: '•';
     position: absolute;
     left: 0;
@@ -695,7 +762,7 @@ nav {
     font-family: RalewayBold;
 
     color: #237A57;
-    
+
 }
 
 .gallery-wrapper {
@@ -718,12 +785,12 @@ nav {
     justify-content: center;
 }
 
-.fade-in{
+.fade-in {
     opacity: 0;
     animation: fadeIn 1s ease-in 1 forwards;
 }
 
-.fade-out{
+.fade-out {
     opacity: 1;
     animation: fadeOut 1s ease-in 1 forwards;
 }
@@ -744,7 +811,7 @@ nav {
     }
 }
 
-.programmes-download-wrapper{
+.programmes-download-wrapper {
     align-self: flex-start;
     cursor: pointer;
     transition: 0.4s all;
@@ -755,8 +822,7 @@ nav {
     transition: 0.4s all;
 }
 
-
-.download-text{
+.download-text {
     position: relative;
     text-align: center;
     padding: 10px 14px 10px 40px;
@@ -767,7 +833,7 @@ nav {
     color: #237A57;
 }
 
-.download-text:before{
+.download-text:before {
     content: '';
     position: absolute;
     bottom: 22px;
@@ -781,15 +847,15 @@ nav {
     transition: 0.4s all;
 }
 
-.programmes-download-wrapper:hover{
+.programmes-download-wrapper:hover {
     background: #237A57;
 }
 
-.programmes-download-wrapper:hover .download-text{
+.programmes-download-wrapper:hover .download-text {
     color: #FEFEFE;
 }
 
-.programmes-download-wrapper:hover .download-text:before{
+.programmes-download-wrapper:hover .download-text:before {
     background-image: url("./img/download_icon_white.png");
 }
 
@@ -797,7 +863,7 @@ nav {
     GALRÉRIA
 */
 
-.gallery-title{
+.gallery-title {
     justify-content: center;
     font-family: RalewayMedium;
     font-size: 52px;
@@ -807,26 +873,27 @@ nav {
     height: calc(100vh - 337px);
 }
 
-
 /*
     KAPCSOLAT
 */
 
-.contact-info-wrapper{
+.contact-info-wrapper {
     align-items: center;
     margin-bottom: 50px;
+    padding: 0 20px;
 }
 
-.contact-title{
+.contact-title {
     font-size: 36px;
     justify-content: center;
     text-align: center;
     color: #1B5E20;
     margin-top: 0;
     font-weight: 600;
+    padding: 0 20px;
 }
 
-.contact-info-title{
+.contact-info-title {
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -837,7 +904,7 @@ nav {
     color: #1B5E20;
 }
 
-.contact-name{
+.contact-name {
     max-width: 500px;
     width: 100%;
     line-height: 21px;
@@ -845,7 +912,7 @@ nav {
     font-size: 20px;
 }
 
-.contact-info{
+.contact-info {
     max-width: 500px;
     width: 100%;
     height: 50px;
@@ -856,7 +923,7 @@ nav {
     color: #313131;
 }
 
-.contact-link{
+.contact-link {
     display: inline-flex;
     font-weight: 600;
     color: #1B5E20;
@@ -864,11 +931,11 @@ nav {
     margin-left: auto;
 }
 
-.contact-link:hover{
+.contact-link:hover {
     border-bottom: 2px solid #1B5E20;
 }
 
-.contact-map-wrapper{
+.contact-map-wrapper {
     position: relative;
     margin-top: 0px;
     margin-bottom: 50px;
@@ -876,7 +943,7 @@ nav {
     align-items: center;
 }
 
-.contact-map-wrapper-left{
+.contact-map-wrapper-left {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -884,12 +951,10 @@ nav {
     width: 40%;
     padding: 10px;
 
-
     background: rgba(255, 255, 255, 0.85);
 }
 
-
-.contact-map-title{
+.contact-map-title {
     font-size: 30px;
     color: #2E7D32;
     margin: 0;
@@ -897,36 +962,35 @@ nav {
 
 }
 
-.contact-map-subtitle{
+.contact-map-subtitle {
     padding-left: 5px;
     margin: 0 0 10px;
 
     font-weight: 400;
 }
 
-
-.google-map{
+.google-map {
     width: 100%;
     height: 550px;
     background: #eee;
 }
 
-.contact-map-coordinates-wrapper{
+.contact-map-coordinates-wrapper {
     border-top: 2px solid #237A57;
 }
 
-.coordinates-row{
+.coordinates-row {
     width: 100%;
     padding: 10px 5px;
     border-bottom: 1px solid #BDBDBD;
 }
 
-.coordinates-row p{
+.coordinates-row p {
     width: 100%;
 
 }
 
-.coordinates-header p{
+.coordinates-header p {
     font-family: RalewayMedium;
     font-size: 18px;
 }
@@ -935,26 +999,23 @@ nav {
     TÁMOGATÓK
 */
 
-.supporters-wrapper{
+.supporters-wrapper {
     padding-top: 0;
     justify-content: center;
-    height: calc(100vh - 297px);
+    min-height: calc(100vh - 297px);
     min-height: 340px;
+
+    flex-wrap: wrap;
 
     align-items: center;
 
 }
 
-.supporter-wrapper{
-    margin-right: 40px;
+.supporter-wrapper {
+    margin:0 20px;
 }
 
-.supporter-wrapper:last-of-type{
-    margin-right: 0;
-
-}
-
-.supporter-title{
+.supporter-title {
     font-size: 32px;
 
     color: #237a57;
@@ -963,14 +1024,11 @@ nav {
     margin-top: 0;
 }
 
-.supporter-img{
+.supporter-img {
     max-height: 250px;
     width: 250px;
     object-fit: contain;
 }
-
-
-
 
 /*
     FOOTER
@@ -994,39 +1052,226 @@ footer {
     line-height: 21px;
 }
 
+.hamburger {
+    display: none;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    z-index: 25;
+
+    cursor: pointer;
+
+    border-bottom: 3px solid #FEFEFE;
+
+    transition: 0.4s all;
+}
+
+.hamburger:before, .hamburger:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
 
 
 
-@media screen and (max-height: 760px)  {
-    .page-title{
+    background: #FEFEFE;
+}
+
+.hamburger:before {
+    bottom: 15px;
+}
+
+.hamburger:after {
+    bottom: 6px;
+}
+
+.ham-aloldal{
+    border-color: #237A57;
+}
+
+.ham-aloldal:after, .ham-aloldal:before{
+    background: #237A57;
+}
+
+@media screen and (max-height: 760px) {
+    .page-title {
         font-size: 60px;
     }
 }
 
-
-@media screen and (max-height: 600px)  {
-    .event-description{
+@media screen and (max-height: 600px) {
+    .event-description {
         margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .page-title {
+        font-size: 50px;
+    }
+
+    .page-subtitle {
+        font-size: 36px;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+
+    .nav-bar{
+        display: none;
+    }
+
+    .event-description{
+        width: auto;
+        max-width: 100%;
+    }
+
+    .main-sign-up{
+        width: auto;
+        max-width: 100%;
+    }
+
+    .programmes-panel{
+        flex-direction: column;
+    }
+
+    .programmes-panel-left{
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    .programmes-text-main{
+        text-align: center;
+    }
+
+    .programmes-panel-right{
+        justify-content: center;
+    }
+
+    .programmes-text{
+        text-align: center;
+    }
+
+    .programmes-download-wrapper{
+        align-self: center;
+    }
+
+    .contestants-title{
+        max-width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .contestant-list-item{
+        margin-left: calc(50% - 85px);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .flex-row{
+        flex-direction: column;
+    }
+
+    .form-inputs-wrapper{
+        width: 100%;
+    }
+
+    .rules-wrapper{
+        margin-left: 0;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .contact-map-wrapper-left{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .page-title{
+        font-size: 36px;
+    }
+
+    .page-subtitle{
+        font-size: 28px;
+    }
+
+    .hamburger{
+        display: flex;
+        border-color: #237a57;
+    }
+
+    .hamburger:after, .hamburger:before{
+        background: #237a57;
+    }
+
+    .logo img{
+        display: none;
+    }
+
+    .logo{
+        height: 50px;
+        width: 50px;
+        background: url("./img/logo.png") no-repeat center center;
+        background-size: contain;
+    }
+
+    .prize-wrapper{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .programmes-gallery-wrapper{
+        width: 100%;
+        height: 300px;
     }
 
 
 
+    .gallery-item{
+        margin-left: -100px;
+    }
+
+
+    .contact-info{
+        font-size: 16px;
+    }
+
+    .contact-map-wrapper-left{
+        width: 100%;
+    }
+
+    .contact-map-title{
+        font-size: 20px;
+    }
+
+    .contact-map-subtitle{
+        font-size: 14px;
+    }
+
+    .coordinates-row p{
+        font-size: 14px;
+    }
+
 }
 
+@media screen and (max-width: 350px) {
+    .page-title{
+        font-size: 28px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .page-subtitle{
+        font-size: 24px;
+    }
+}
 
 /*
     FONTS
@@ -1081,11 +1326,3 @@ footer {
     font-family: SatisfyRegular;
     src: url('./fonts/Satisfy-Regular.ttf');
 }
-
-
-
-
-
-
-
-
