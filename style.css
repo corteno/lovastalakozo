@@ -234,10 +234,14 @@ nav {
     padding-top: 40px;
 }
 
+.index-wrapper{
+    align-items: center;
+}
+
 .event-description {
     max-width: 50%;
     width: 50%;
-    margin: 50px 0;
+    margin-bottom: 30px;
 }
 
 .event-description-title {
@@ -261,10 +265,12 @@ nav {
     height: auto;
     line-height: 35px;
     font-family: DancingScriptRegular;
-    font-size: 28px;
-    text-align: justify;
+    font-size: 32px;
+    text-align: center;
+    align-items: center;
     margin-bottom: 5px;
-    padding: 0 5px;
+    padding: 0 5px 30px;
+    border-bottom: 2px solid #237A57;
 }
 
 .main-sign-up {
@@ -273,12 +279,21 @@ nav {
     justify-content: center;
 }
 
+.main-sign-up .programmes-text-wrapper{
+    margin-bottom: 30px;
+}
+
+.main-sign-up .programmes-text{
+    font-size: 32px;
+    text-align: center;
+}
+
 .main-sign-up-title {
     margin: 0;
-    margin-bottom: 40px;
-
-    font-size: 36px;
-    line-height: 54px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 31px;
+    color: #424242;
 }
 
 .main-sign-up-button {
@@ -294,7 +309,7 @@ nav {
 
     color: #FAFAFA;
 
-    background: #1B5E20;
+    background: #237A57;
     border-radius: 2px;
 
     transition: 0.3s all;
@@ -560,7 +575,7 @@ nav {
 */
 
 .programmes-wrapper{
-    min-height: 500px;
+    min-height: 450px;
     height: calc(100vh - 337px);
 }
 
@@ -639,6 +654,49 @@ nav {
     font-size: 18px;
 }
 
+.programmes-contestants{
+    padding: 0 20px;
+}
+
+.contestants-title{
+    max-width: calc(55% - 40px);
+    color: #237A57;
+    font-family: DancingScriptRegular;
+    font-size: 42px;
+    margin: 0;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+
+    border-bottom: 2px solid #237A57;
+}
+
+.contestants-list{
+    padding-left: 5px;
+}
+
+.contestant-list-item{
+    position: relative;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: #424242;
+}
+
+.contestant-list-item:before{
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 2px;
+
+    font-size: 28px;
+
+    font-family: RalewayBold;
+
+    color: #237A57;
+    
+}
 
 .gallery-wrapper {
     position: relative;
@@ -884,10 +942,16 @@ nav {
     min-height: 340px;
 
     align-items: center;
+
 }
 
-.supporter-wrapper:first-of-type{
+.supporter-wrapper{
     margin-right: 40px;
+}
+
+.supporter-wrapper:last-of-type{
+    margin-right: 0;
+
 }
 
 .supporter-title{
