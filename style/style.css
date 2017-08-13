@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+    font-family: RalewayRegular;
+    color: #212121;
+
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+
+title {
+    display: none;
+}
+
+body, main, div, form, input, textarea, label, ul, li, header, nav, a, h1, h2, h3, button, section {
+    display: flex;
+}
+
+input:focus {
+    outline: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    margin: 0;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.box-shadow {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+}
+
+.login-wrapper {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    height: 380px;
+    padding: 30px;
+
+    background: #FAFAFA;
+    border-radius: 6px;
+}
+
+.login-title {
+    margin-top: 0;
+    margin-bottom: 80px;
+
+    color: #388E3C;
+}
+
+.form-input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.form-input {
+    width: 100%;
+
+    padding: 5px 5px;
+    padding-bottom: 7px;
+
+    border: none;
+    border-bottom: 1px solid #388E3C;
+
+    font-size: 16px;
+    font-family: RalewayMedium;
+
+    background: none;
+}
+
+.form-label {
+    pointer-events: none;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    color: #388E3C;
+
+    transition: 0.3s all;
+}
+
+.bar {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+
+    background: #388E3C;
+
+    transition: 0.3s all;
+}
+
+.form-input:focus ~ .form-label, .form-input:valid ~ .form-label {
+    top: -22px;
+    left: 0;
+
+    font-size: 18px;
+}
+
+.form-input:focus ~ .bar, .form-input:valid ~ .bar {
+    width: 100%;
+}
+
+.form-submit {
+    padding: 17px 35px;
+    margin-top: 15px;
+    /*background: #388E3C;*/
+    background: transparent;
+    border: 2px solid #388E3C;
+    border-radius: 4px;
+
+    color: #388E3C;
+
+    font-size: 16px;
+    font-family: RalewayMedium;
+    /*text-transform: uppercase;*/
+
+    cursor: pointer;
+    transition: 0.4s all;
+}
+
+.form-submit:hover {
+    background: #388E3C;
+    color: #FAFAFA;
+}
+
+/*
+    ADMIN
+*/
+
+.admin-wrapper {
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background: #424242;
+    border-right: 1px solid #BDBDBD;
+    padding-right: 10px;
+}
+
+.sidebar-title {
+    height: auto;
+    color: #F5F5F5;
+    padding: 15px 0 15px 10px;
+    margin: 0;
+    border-bottom: 2px solid #616161;
+}
+
+.sidebar-menu-list {
+
+}
+
+.sidebar-menu-item {
+    width: 100%;
+    color: #F5F5F5;
+    padding: 15px 0 15px 15px;
+    cursor: pointer;
+    transition: 0.3s all;
+    border-bottom: 1px solid #616161;
+}
+
+.sidebar-menu-item:hover {
+    padding-left: 25px;
+    font-weight: 800;
+}
+
+.sidebar-made-by {
+    margin-top: auto;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 12px;
+
+    color: #9E9E9E;
+}
+
+.admin-content-wrapper {
+    width: 100%;
+    padding: 20px;
+}
+
+.admin-content-header {
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+}
+
+.admin-content-title {
+    margin: 0;
+    font-size: 42px;
+    color: #424242;
+}
+
+.admin-content-date {
+    color: #757575;
+    margin: 0;
+    padding-left: 5px;
+}
+
+.admin-content-list, .admin-content-list-item {
+    width: 100%;
+}
+
+.name, .contact {
+    width: 20%;
+}
+
+.horsename {
+    width: 10%;
+}
+
+.company {
+    width: 10%;
+    text-align: center;
+}
+
+.delete {
+    width: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+
+    font-family: RalewayBold;
+    font-size: 22px;
+    margin-left: auto;
+
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.admin-content-list-item .delete{
+    color: #E53935;
+}
+
+.admin-content-list-item .delete:hover{
+    background: #E53935;
+    color: #EEEEEE;
+}
+
+.comments {
+    width: calc(42% - 50px);
+    padding-left: 30px;
+}
+
+.admin-content-list-item-header {
+    height: 50px;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 10px;
+}
+
+.admin-content-list-item-header p {
+    font-family: RalewayMedium;
+    font-size: 18px;
+}
+
+.admin-content-list-item {
+    height: 50px;
+    padding: 0 10px;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.no-candidates{
+    line-height: 40px;
+    font-family: RalewayMedium;
+    padding-left: 5px;
+    color: #9E9E9E;
+}
+
+.download-button{
+    margin-left: auto;
+    height: 45px;
+    padding: 0 20px;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #237A57;
+    color: #237A57;
+    font-family: RalewayMedium;
+    font-weight: 600;
+
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.download-button:hover{
+    color: #EEE;
+    background: #237A57;
+}
+
+
+
+
+/*
+    FONTS
+*/
+
+@font-face {
+    font-family: RalewayLight;
+    src: url('../fonts/Raleway-Light.ttf');
+}
+
+@font-face {
+    font-family: RalewayRegular;
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-family: RalewayMedium;
+    src: url('../fonts/Raleway-Medium.ttf');
+}
+
+@font-face {
+    font-family: RalewayBold;
+    src: url('../fonts/Raleway-Bold.ttf');
+}
