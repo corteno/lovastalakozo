@@ -479,6 +479,7 @@ nav {
 .rules-wrapper {
     width: 50%;
     margin-left: 20px;
+    max-height: 535px;
 
 }
 
@@ -506,6 +507,54 @@ nav {
 .rules-text {
     height: auto;
     margin-bottom: 5px;
+}
+
+.rules-bold:first-of-type{
+    margin-top: 0;
+}
+
+.rules-bold{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: RalewayMedium;
+    font-size: 20px;
+}
+
+.rules-list{
+    margin-bottom: 5px;
+    min-height: 65px;
+
+}
+
+.rules-list-item{
+    position: relative;
+    line-height: 21px;
+    min-height: 21px;
+    padding-left: 20px;
+}
+
+.rules-list-item:before{
+    position: absolute;
+    content: '•';
+    font-size: 24px;
+    left: 5px;
+
+    color: #237A57;
+}
+
+.rules-img{
+    width: auto;
+    height: 90%;
+    margin-bottom: 10px;
+}
+
+.rules-link{
+    line-height: 21px;
+    min-height: 21px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: #237A57;
 }
 
 .checkbox-wrapper {
