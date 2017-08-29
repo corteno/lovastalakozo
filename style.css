@@ -742,6 +742,7 @@ nav {
     font-size: 28px;
     line-height: 34px;
     font-family: RalewayRegular;
+    text-align: left;
     margin-bottom: 20px;
     padding: 0 10px 10px;
     border-bottom: 2px solid #1B5E20;
@@ -1090,8 +1091,6 @@ footer {
     margin-top: 50px;
 
     background: #212121;
-
-    border-top: 2px solid #1B5E20;
 
     align-items: center;
     justify-content: center;
